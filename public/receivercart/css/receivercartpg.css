@@ -1,0 +1,126 @@
+foodcart@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+/* black-900, bold-700, medium-500, light-300 */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#title {
+    /* background-image: url("leaf.jpg"); */
+    background-size: cover;
+    background-color: #00AF66;
+}
+
+#title .container-fluid {
+    padding: 3% 15% 0;
+}
+
+#title h1 {
+    font-family: 'Montserrat - Black', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/*Navigation bar*/
+#title .navbar {
+    padding: 0 0 4.5rem;
+}
+
+#title .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#title .nav-item {
+    padding: 0 18px;
+}
+
+#title .nav-link {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #05386b;
+}
+
+#title .nav-link:hover {
+    color: #fefbd8;
+    transition-duration: 1s;
+}
+
+
+/* rechompg */
+#rechompg .foodcartlist h2 {
+
+    text-align: center;
+    color: #216353;
+    padding: 4% 0 2%;
+}
+#rechompg h3,h5 {
+
+    color: #216353;
+}
+#rechompg .foodcartlist {
+    background: linear-gradient(to bottom, #ccffcc -19%, #ccffcc 117%);
+}
+
+#rechompg .details {
+    padding: 0 28%;
+    background-color: #CCFFCC;
+}
+
+@media (max-width: 990px) {
+  #rechompg .details {
+    padding: 0 18%;
+  }
+}
+
+@media (max-width: 880px) {
+  #rechompg .details {
+    padding: 0 12%;
+  }
+}
+#rechompg .details .custom-scrollbar-css {
+    height: 600px;
+}
+
+
+/* Custom Scrollbar using CSS */
+#rechompg .details .custom-scrollbar-css {
+    overflow-y: scroll;
+}
+
+/* scrollbar width */
+#rechompg .details .custom-scrollbar-css::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* scrollbar track */
+#rechompg .details .custom-scrollbar-css::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* scrollbar handle */
+#rechompg .details .custom-scrollbar-css::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: linear-gradient(to bottom, #1d976c, #93f9b9);
+}
+
+
+
+
+/* Footer */
+#footer {
+    text-align: center;
+    background-color: #00AF66;
+}
+
+#footer h1 {
+    padding: 5% 0 3%;
+    font-size: 40px;
+}
+
+#footer i {
+    padding: 0 12px 4%;
+}

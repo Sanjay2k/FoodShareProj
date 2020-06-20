@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+/* black-900, bold-700, medium-500, light-300 */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .confirm{
+  margin: 10% 0 0;
+  color: #216353;
+} */
+
+#title {
+    /* background-image: url("leaf.jpg"); */
+    background-size: cover;
+    background-color: #00AF66;
+}
+
+#title .container-fluid {
+    padding: 3% 15% 0;
+}
+
+#title h1 {
+    font-family: 'Montserrat - Black', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/*Navigation bar*/
+#title .navbar {
+    padding: 0 0 4.5rem;
+}
+
+#title .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#title .nav-item {
+    padding: 0 18px;
+}
+
+#title .nav-link {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #05386b;
+}
+
+#title .nav-link:hover {
+    color: #fefbd8;
+    transition-duration: 1s;
+}
+
+
+/* receive */
+
+#receive h3,h4{
+  color: #216353;
+  text-align: left;
+  /* display:inline-block;  */
+}
+
+#receive h5{
+  color: #216353;
+  text-align: left;;
+}
+
+#receive .get,
+.remove h2 {
+
+    text-align: center;
+    color: #216353;
+}
+
+#receive .get h2 {
+
+    padding-top: 45%;
+    padding-bottom: 5%;
+}
+
+@media (max-width: 880px) {
+  #receive .get h2 {
+    padding: 5% 0 2%;
+  }
+}
+
+#receive .remove h2 {
+
+    padding-top: 15%;
+    padding-bottom: 8%;
+}
+
+#receive .removeit .submit,
+#receive .getit .submit {
+    display: block;
+    background-color: #216353;
+}
+
+#receive .getit .submit {
+    padding: 2px 3%;
+}
+
+#receive .removeit .submit {
+    padding: 2px 3%;
+}
+
+#receive .getit .submit:hover,
+#receive .removeit .submit:hover {
+    background-color: #8DC895;
+}
+
+
+#receive .remove {
+    background-color: #CCFFCC;
+}
+
+#receive .removeit,
+.getit {
+    padding: 7%;
+}
+
+
+#receive .getit .custom-scrollbar-css,
+#receive .removeit .custom-scrollbar-css {
+    height: 600px;
+}
+
+
+/* Custom Scrollbar using CSS */
+#receive .getit .custom-scrollbar-css,
+#receive .removeit .custom-scrollbar-css {
+    overflow-y: scroll;
+}
+
+/* scrollbar width */
+#receive .getit .custom-scrollbar-css::-webkit-scrollbar,
+#receive .removeit .custom-scrollbar-css::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* scrollbar track */
+#receive .getit .custom-scrollbar-css::-webkit-scrollbar-track,
+#receive .removeit .custom-scrollbar-css::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* scrollbar handle */
+#receive .getit .custom-scrollbar-css::-webkit-scrollbar-thumb,
+#receive .removeit .custom-scrollbar-css::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: linear-gradient(to bottom, #1d976c, #93f9b9);
+}
+
+
+#querysection{
+  padding: 3% 15% 5%;
+}
+
+#querysection h1{
+  padding: 3% 0 5%;
+  color: #216353;
+  text-align: center;
+}
+#querysection h4{
+  padding: 3% 0 2%;
+  color: #216353;
+  text-align: left;
+}
+
+#querysection p{
+  padding: 0 0 2%;
+  color: #5f6769;
+}
+
+
+/* Footer */
+#footer {
+    text-align: center;
+    background-color: #00AF66;
+}
+
+#footer h1 {
+    padding: 5% 0 3%;
+    font-size: 40px;
+}
+
+#footer i {
+    padding: 0 12px 4%;
+}

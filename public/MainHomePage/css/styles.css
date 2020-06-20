@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+/* black-900, bold-700, medium-500, light-300 */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#title {
+  /* background-image: url("leaf.jpg"); */
+  background-size: cover;
+  background-color: #00af66;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 2%;
+}
+
+#title h1 {
+  font-family: 'Montserrat - Black', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/*Navigation bar*/
+#title .navbar {
+  padding: 0 0 4.5rem;
+}
+
+#title .navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#title .nav-item {
+  padding: 0 18px;
+}
+
+#title .nav-link {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #05386b;
+}
+
+#title .nav-link:hover {
+  color: #fefbd8;
+  transition-duration: 1s;
+}
+
+/* download-button */
+#title .download-button {
+  margin: 12% 7% 7% 0;
+  font-size: 20px;
+  text-align: left;
+  background-color:  #ffffb3;
+}
+
+#title .button {
+  margin: 12% 7% 7% 0;
+  font-size: 20px;
+  text-align: left;
+  background-color: #ffffb3;
+}
+
+#title .download-button:hover {
+  background-color: #fdd998;
+}
+
+#title .button:hover {
+  background-color: #fdd998;
+}
+
+.SignupScroll {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.SignupScroll:hover {
+  text-decoration: none;
+  color: #05386b;
+  transition-duration: 1s;
+}
+
+#title .db {
+  padding: 1% 12% 1% 7%;
+}
+
+#title .rb {
+  padding: 1% 6%;
+}
+
+/* title-image */
+#title .title-image {
+    width: 70%;
+    position: absolute;
+    right: 8%;
+}
+@media (max-width: 1080px) {
+    .title-image {
+        height: 0;
+    }
+}
+/* SignUp Section */
+#signup .container-fluid {
+  padding: 3% 15% 10%;
+}
+
+#signup h1 {
+  padding: 5% 7%;
+}
+
+#signup .donar h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  padding: 15% 7% 0;
+}
+
+#signup .donar h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+#signup .receiver h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+#signup .para {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  padding: 10% 15%;
+  margin-bottom: 4%;
+}
+
+#signup .submit {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15%;
+  width: 30%
+}
+
+/* #signup .verticalLine{
+  margin-right: -right: 1px;
+  ma:  #05386b;
+}
+
+@media (max-width: 1080px) {
+  #signup .verticalLine{
+    border-right: 0;
+  }
+} */
+/* features Section */
+
+#features .feat h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  padding: 7% 7% 3%;
+}
+
+#features .feat p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 15% 7%;
+}
+
+/* About Us  Section */
+#aboutus .container-fluid {
+  padding-top: 2%;
+}
+
+#aboutus{
+  background-size: cover;
+  background-color: #b5e7a0;
+}
+#aboutus .about {
+  padding-bottom: 3%;
+}
+#aboutus .aboutuspic{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8%;
+  width: 70%;
+}
+@media (max-width: 1080px) {
+    .aboutuspic {
+        height: 0;
+    }
+}
+
+#aboutus .aboutusheading{
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+  padding-top: 14%;
+  padding-bottom: 10%;
+}
+@media (max-width: 1080px) {
+  #aboutus .aboutusheading{
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: center;
+  }
+}
+
+#aboutus .para {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+
+}
+@media (max-width: 1080px) {
+  #aboutus .para {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 10% 0;
+  }
+}
+#aboutus .about p {
+  font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#aboutus .icon {
+  padding-right: 2%;
+}
+
+/* icon section */
+#icon {
+  padding: 4% 15% 7%;
+  background-color: #b5e7a0;
+  position: relative;
+}
+
+#icon .feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+#icon h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+#icon p {
+  color: #8f8f8f;
+}
+
+#icon .icon {
+  color: #00b359;
+  margin-bottom: 1rem;
+}
+
+/* carrouse section */
+#slider h1{
+  text-align: center;
+  padding: 1% 15% 5%;
+}
+/* .carousel {
+  width:640px;
+  height:360px;
+} */
+
+.carousel {
+  width:75%;
+  margin: 0 auto;
+}
+#pictureText ul{
+  padding: 8% 15% 5%;
+    font-size: 20px;
+}
+/* subtitle section */
+#subtitle .howweovercomeimg{
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ padding-top: 12%;
+ width: 70%;
+}
+#subtitle .howweovercomeimg1{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12%;
+  width: 70%;
+}
+@media (max-width: 1080px) {
+  #subtitle .howweovercomeimg {
+    padding-top: 0;
+    height: 0;
+  }
+
+}
+#subtitle .c1,
+.c2, .c3 {
+  background: #b5e7a0;
+}
+
+#subtitle h1 {
+  padding: 10% 5% 5% 7%;
+  background: #b5e7a0;
+  margin-bottom: 0;
+}
+
+#subtitle .c1 h2 {
+  padding: 15% 10% 0%;
+}
+
+#subtitle .c1 p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  padding: 10% 10% ;
+  margin-bottom: 4%;
+}
+
+#subtitle .c2  p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  padding: 10% 10% ;
+  margin-bottom: 4%;
+}
+
+#subtitle .c3 p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  padding: 10% 10% ;
+  margin-bottom: 4%;
+}
+
+#subtitle .c2 h2 {
+  padding: 15% 10% 0%;
+}
+
+#subtitle .c3 h2 {
+  padding: 15% 10% 0%;
+}
+
+.c1, .c2, .c3 {
+  padding-bottom: 75px;
+}
+
+@media (max-width: 1080px) {
+#subtitle .c1 p{
+  background: #b5e7a0;
+  text-align: center;
+  padding-bottom: 0;
+}
+#subtitle .c2 p{
+  background: #b5e7a0;
+  text-align: center;
+  padding-bottom: 0;
+}
+#subtitle .c3 p{
+  background: #b5e7a0;
+  text-align: center;
+}
+.c1, .c2, .c3 {
+  padding-bottom: 2%;
+}
+h2{
+  text-align: center;
+}
+}
+/* picture section */
+#pictureText .pictureText h1 {
+  text-align: center;
+  padding: 7% 7% 3%;
+}
+
+#pictureText .pictureText p {
+  padding: 4% 15% 8%;
+  text-align: center;
+}
+
+
+/* feedback section */
+#feedback {
+  padding: 7% 25%;
+}
+
+#feedback h1 {
+  text-align: center;
+  padding: 5% 15% 0;
+}
+
+#feedback h6 {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 7%;
+}
+
+#feedback .group label {
+  text-align: center;
+  padding-left: 70%;
+  padding-bottom: 5%;
+  font-size: 25px;
+}
+
+#feedback .text label {
+  padding-bottom: 3%;
+}
+
+#feedback .text {
+  font-size: 25px;
+  padding-left: 34.2%;
+}
+
+#feedback .but {
+  padding: 5% 48%;
+}
+@media (max-width: 1080px) {
+  #feedback h1 {
+    text-align: center;
+    font-size: 1.55rem;
+  }
+
+}
+/* Footer */
+#footer {
+  text-align: center;
+  background-color: #00af66;
+}
+
+#footer h1 {
+  padding: 5% 0;
+  font-size: 55px;
+}
+
+#footer i {
+  padding: 0 2% 5%;
+}
+
+/* background-color: #3bb78f;
+background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+/* color: #fff; */
+/* background-color: #3bb78f;
+background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%); */
+/* background-color: #63d471;
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%); */
+/* background-color: : #00af66;
+*/

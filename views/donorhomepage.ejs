@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FoodRe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--   CSS LINK-->
+  <link rel="stylesheet" type="text/css" href="donorhomepage/css/donar.css">
+
+  <!--    Bootstrap link-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!--    Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+  <!--    Bootstrap link-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- title section -->
+
+  <section id="title">
+    <div class="container-fluid-navbar">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <!-- <img src="logo.png" width="150px" height="50px" alt=""> -->
+          FoodShare
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/donlogout">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/donlogout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h2>Welcome Donor !!</h2>
+    </div>
+    <h6>what would you like to donate ?</h6>
+    <form class="allign-center" action="/donatedfood" method="post" id="donationform">
+      <input type="text" class="input" placeholder="Foodname" name="foodname" autocomplete="off" required>
+      <input type="number" class="input" placeholder="persons can be served" name="qty" autocomplete="off" required>
+      <select name="expiry" form="donationform" class="input" style="height: 60px; color:white;" required>
+      <option value=0>will be edible for (in hrs)</option>
+      <option value=1>1hr</option>
+      <option value=2>2hr</option>
+      <option value=3>3hr</option>
+      <option value=4>4hr</option>
+      <option value=5>5hr</option>
+      <option value=6>6hr</option>
+      <option value=7>7hr</option>
+      <option value=8>8hr</option>
+      <option value=12>1/2 day</option>
+      <option value=24>1 day</option>
+      </select>
+      <button type="submit" name="button" class="btn btn-dark">ADD</button>
+    </form>
+    <br>
+  </section>
+
+  <!-- detail section -->
+  <section id=details>
+    <br><br>
+
+    <h6 class="donationList">Food Items List</h6>
+    <div class="form-2-border">
+
+    <% if(button == 1){ %>
+      <form class="no-btm-line">
+      <input type="text" class="form-2-input" style="text-align: center;" value="Your cart is empty" size="38">
+      </form>
+<%}else{%>
+
+      <% foodarray.forEach(function(item,index){ %>
+
+      <form class="btm-line" action="/deletedonatedfood" method="post">
+        <input type="text" class="form-2-input" value="<%=item.foodName%> - <%=item.no_of_persons%> persons - <%=item.hours%>hrs" size="35">
+        <input type="hidden" name="indexvalue" value="<%= index %>">
+        <button type="submit" name="button" class="btn"><i class="fas fa-trash" aria-hidden="true"></i></button>
+      </form>
+
+    <%  }) %>
+    <% } %>
+    <%  if( button != 1){%>
+      <form class="" action="/adddata" method="post">
+        <input type="hidden" name="donemail" value="<%=donemail%>">
+        <button type="submit" class="btn btn-dark bt-padding" name="Donate">Donate</button>
+      </form>
+   <% } %>
+  </div>
+<% if(i==1){ %>
+  <h5>Thankyou For donating!!</h5>
+<% } %>
+</section>
+
+<section id="thankyoumsg">
+  <div class="container-fluid">
+    <div class="row" style="padding-bottom:10%;">
+      <div class=" col-lg-6">
+        <img src="donorhomepage/images/thankyouimg.png" alt="thankyoumsg" class="thankyoumsgpic">
+      </div>
+      <div class="about col-lg-6">
+        <h2 class="thankyoumsgheading">Thank-you Donor</h2>
+        <p class="para">Hey welcome :) and Thanks for joining hands with us. With your presence we can make a change in the society by taking small steps
+           towards our goal of removing hunger in the society. So keep supporting us!</p>
+        </div>
+    </div>
+  </div>
+</section>
+  <!-- Third Section -->
+
+  <section id=third>
+    <h1>Problems In India</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="r1 col-lg-6">
+          <i class="fas fa-hiking fa-4x icn"></i>
+          <p style="text-align:center;">According to FAO estimates in ‘The State of Food Security and Nutrition in the World, 2019' report,
+            194.4 million people are undernourished in India. By this measure 14.5% of the population is undernourished in India.</p>
+        </div>
+        <div class="r1 col-lg-6">
+          <i class="fas fa-baby fa-4x icn"></i>
+          <p style="text-align:center;">Further according to the report 37.9% of the children aged under five in India are stunted (too short for their age),
+            while 20.8% suffer from wasting, meaning their weight is too low for their height. </p>
+        </div>
+
+        <div class="r2 col-lg-6">
+          <i class="fas fa-ambulance fa-4x icn"></i>
+          <p style="text-align:center;">The Global Hunger Index 2018 ranks India at 103 out of 119 countries on the basis of three leading
+             indicators -- prevalence of wasting and stunting in children under 5 years, under 5 child mortality rate, and the proportion of
+             undernourished in the population.</p>
+        </div>
+        <div class="r2 col-lg-6">
+          <i class="fas fa-users fa-4x icn"></i>
+          <p style="text-align:center;">With nearly 195 million undernourished people, India shares a quarter of the global hunger burden.
+             Nearly 47 million or 4 out of 10 children in India are not meeting their full human potential because of chronic
+             undernutrition or stunting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description section -->
+
+  <section id="subtitle">
+    <h1>How We Overcome</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="c1 col-lg-6">
+          <img src="donorhomepage/images/handshake.jpg" alt="" class="howweovercomeimg1">
+        </div>
+        <div class="c1 col-lg-6">
+          <h2>Increased Food Availability</h2>
+          <p>We are joining hands with a large number of kind-hearted Donors like you, so we can increase the quantity of the food within particular area
+             with a time constraint from which a can serve large number of people within a particular zone. Hence the Availability of food will be increased
+             and the number of people benefited will also increase. </p>
+        </div>
+
+        <div class="c2 col-lg-6">
+          <h2>Reaching larger extent of people</h2>
+          <p>With FoodShare we are reaching larger extent of people with the help of the network that we have built, i.e. we will serve not only the people
+             in the orphanages by also the people who are homeless and struggling for their daily meal with the help of the sub-control system. </p>
+        </div>
+        <div class="c2 col-lg-6">
+          <img src="donorhomepage/images/donrnetworking.jpg" alt="" class="howweovercomeimg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <h1>Contact Us</h1>
+    <i class="social-icon fab fa-facebook-f fa-2x"></i>
+    <i class="social-icon fab fa-instagram fa-2x"></i>
+    <i class="social-icon fas fa-envelope fa-2x"></i>
+    <i class="social-icon fab fa-twitter fa-2x"></i>
+
+  </footer>
+
+</body>
+
+</html>

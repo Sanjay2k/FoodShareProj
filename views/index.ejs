@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FoodShare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--   CSS LINK-->
+  <link rel="stylesheet" type="text/css" href="MainHomePage/css/styles.css">
+
+  <!--    Bootstrap css link-->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <!--    Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+  <!--    Bootstrap js link-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- title section -->
+
+  <section id="title">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <!-- <img src="logo.png" width="150px" height="50px" alt=""> -->
+          FoodShare
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutus">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#feedback">FeedBack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col-lg-6 col">
+          <h1>Making Hunger Disappear</h1>
+          <a href="/donlogin">
+          <button type="button" class="btn btn-lg download-button db">
+            <p>Donar</p>
+            <p>Login</p>
+            <p><i class="fas fa-arrow-right"></i></p>
+          </button>
+          </a>
+          <a href="/reclogin">
+            <button type="button" class="btn btn-lg button rb">
+            <p>Receiver</p>
+            <p>Login</p>
+            <p><i class="fas fa-arrow-right"></i></p>
+          </button>
+          </a>
+
+          <p>Don't have an account ? <a class="SignupScroll" href="#signup">SignUp</a></p>
+
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="MainHomePage/images/titleimage.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SignUp Section -->
+
+  <section id="signup">
+    <h1>Dont Have An Account?</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="donar col-lg-6 verticalLine">
+          <h2>Donar</h2>
+          <p class="para">Hey Donor! Please click the button below to sign up and Get Started :)  Join hands with us to help the needed.</p>
+          <a class="btn btn-dark btn-lg submit" href="/donarsignup" role="button">Sign Up</a>
+        </div>
+        <!-- <div class="donar col-lg-4 verticalLine">
+          <h1 class="verticalLine"></h1>
+        </div> -->
+        <div class="receiver col-lg-6">
+          <h2>Receiver</h2>
+          <p class="para">Hey Receiver!  Please click the button below to sign up and Get Started :) Join hands with us to Buit a Greater network</p>
+      <a class="btn btn-dark btn-lg submit" href="/receiversignup" role="button">Sign Up</a>
+
+      </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- features -->
+
+  <!-- <section id="features">
+        <div class="container-fluid">
+            <div class="feat">
+                <h2>Hello</h2>
+                <p>sncjdsfhbjesdf dbfgyerj bsgfyr ehgsfbyu ehbgfyuaer ehsfgvyue egfyu4e gefyu4ae,u egfyue ehgfyu4ew,e bfecyugrv. dsfjhbuaeirg hgiuaer jfnhuaeirgt dbfyuegw.</p>
+            </div>
+        </div>
+    </section> -->
+
+  <!-- About Us  Section -->
+
+  <section id="aboutus">
+    <div class="container-fluid">
+      <div class="row">
+        <div class=" col-lg-6">
+          <img src="MainHomePage/images/aboutusimage.jpg" alt="aboutus" class="aboutuspic">
+        </div>
+        <div class="about col-lg-6">
+          <h2 class="aboutusheading">About Us</h2>
+          <p class="para">We are a team an engineering students who take an initiative a help a needed ones.
+            We created this web application to act as a bridge between the Donors and the Receiver. The main objective of the FoodShare is to avoid food wastages and serve those who are in suffering from hunger.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- icon section -->
+
+  <section id="icon">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- need 3 box so 12/3 is 4 -->
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-hands-helping fa-4x"></i>
+          <h3>Networking</h3>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-users fa-4x"></i>
+          <h3>Better Reachability</h3>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-ban fa-4x"></i>
+          <h3>Zero Wastage</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- slider section -->
+  <section id="slider">
+    <br><br><br>
+    <h1>Problems In India</h1>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="MainHomePage/images/Slide1.jpg" class="d-block w-100 " alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="MainHomePage/images/Slide2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="MainHomePage/images/Slide3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- picture section content-->
+  <section id="pictureText">
+    <div class="container-fluid">
+      <div class="pictureText">
+        <ul>
+          <li>According to FAO estimates in ‘The State of Food Security and Nutrition in the World, 2019' report, 194.4 million people are undernourished in India. By this measure 14.5% of the population is undernourished in India.</li>
+          <li>Further according to the report 37.9% of the children aged under five in India are stunted (too short for their age), while 20.8% suffer from wasting, meaning their weight is too low for their height. Malnourished children have a higher risk of death from common childhood illnesses such as diarrhea, pneumonia, and malaria.</li>
+          <li>The Global Hunger Index 2018 ranks India at 103 out of 119 countries on the basis of three leading indicators -- prevalence of wasting and stunting in children under 5 years, under 5 child mortality rate, and the proportion of undernourished in the population.</li>
+          <li>With nearly 195 million undernourished people, India shares a quarter of the global hunger burden. Nearly 47 million or 4 out of 10 children in India are not meeting their full human potential because of chronic undernutrition or stunting.</li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- description section -->
+  <section id="subtitle">
+    <h1>How We Overcome ?</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="c1 col-lg-6">
+          <img src="MainHomePage/images/betterreachability.jpg" alt="" class="howweovercomeimg1">
+        </div>
+        <div class="c1 col-lg-6">
+          <h2>BETTER REACHABILITY</h2>
+          <p>The donors don’t need to transport the foods since we are creating a sub-control system by which the people who are in need will directly collect the food. So we doesn’t have any transportation charges.
+             We don’t need to search the needy people, because we are making them to come to us.  Hence it’s a self-sustaining idea! </p>
+        </div>
+
+        <div class="c2 col-lg-6">
+          <h2>ZERO WASTAGE</h2>
+          <p>The important Goal of us is Zero wastage of the food which can be achieved by making sure that the receiver collects the food.
+             And we will also set an expiry time limit for the food items before which the receiver should collect the food, so the food items will not be wasted and the donors don’t need to wait for the receiver for a long time. </p>
+        </div>
+        <div class="c2 col-lg-6">
+          <img src="MainHomePage/images/zerowastage.png" alt="" class="howweovercomeimg">
+        </div>
+        <div class="c3 col-lg-6">
+          <img src="MainHomePage/images/Networking.jpg" alt="" class="howweovercomeimg">
+        </div>
+        <div class="c3 col-lg-6">
+          <h2>NETWORKING</h2>
+          <p>We are creating a network between the Donor and the Receiver by acting as a bridge between them. We are also linking the homeless people with the help of the receiver i.e.
+            orphanages and they can collect the food from the sub-control systems and we make sure that more number of people will be benefited. Hence the network that we create can remove the Hunger , and our goal will be fulfilled :)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- feedback section -->
+
+  <section id="feedback">
+    <h1>Feedback Form</h1>
+    <h6>We value your feedback</h6>
+    <form action="/send-email" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="mailaddress">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="feedbackgiven">How can we improve?</label>
+        <textarea  class="form-control" rows="7" cols="70" name="feedback"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+
+  <!-- Contact us  section -->
+
+  <footer id="footer">
+    <h1>Contact Us</h1>
+    <i class="social-icon fab fa-facebook-f fa-2x"></i>
+    <i class="social-icon fab fa-instagram fa-2x"></i>
+    <i class="social-icon fas fa-envelope fa-2x"></i>
+    <i class="social-icon fab fa-twitter fa-2x"></i>
+
+  </footer>
+
+</body>
+
+</html>

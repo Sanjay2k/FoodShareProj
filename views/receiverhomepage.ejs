@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FoodShare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  CSS LINK-->
+    <link rel="stylesheet" type="text/css" href="receiverhomepage/css/receiver.css">
+
+    <!--   Bootstrap css link-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!--   Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <!--  Bootstrap js link-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <!-- title section -->
+
+    <section id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">
+                    <!-- <img src="logo.png" width="150px" height="50px" alt=""> -->
+                    FoodShare
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link"  href="/cartpage">My Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="/reclogout">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/reclogout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <form  action="/refresh" method="post">
+          <button type="submit" name="button" id="00B30000008oQyK_refresh" style="display: none;"></button>
+        </form>
+
+        <script type="text/javascript">
+          var button=document.getElementById("00B30000008oQyK_refresh");
+          setInterval(function(){
+          button.click();
+        }, 120000);
+        </script>
+
+    </section>
+
+    <script>
+      var markers = [];
+      var countDownDate = [];
+      var x = [];
+      var distance = [];
+      var days  = [];
+      var hours = [];
+      var minutes = [];
+      var seconds = [];
+    </script>
+
+    <section id="receive">
+
+
+
+        <div class="container-fluid">
+            <div class="row" >
+
+                <div class="remove col-lg-7" >
+
+                  <h2>Available Foods</h2>
+                  <div class="row py-5 getit">
+
+                      <div class="card mb-4">
+                          <div class="card-body p-5">
+                              <div class="custom-scrollbar-css p-3">
+
+                              <%  if(totalfooditems.length == 0){  %>
+                                  <div class="card mb-4">
+                                      <div class="card-body p-3">
+                                          <h3 style="align:center;">No Food Found</h3>
+                                          <br>
+                                          <p class="font-italic">We are working hard to increase the food availabitity by expanding
+                                          our connections with donors arround you. stay tuned with us for further updates.Thank You!!</p>
+                                        </div>
+                                    </div>
+                              <%   }  %>
+
+                                  <% totalfooditems.forEach(function(item,index){ %>
+
+
+                                    <div class="card mb-4">
+                                        <div class="card-body p-3">
+                                          <form action="/addtocart" method="post">
+                                            <h3><%=item.foodname%> (<%=item.qty%> persons)</h3>
+                                            <h5 id="<%=item.id%>" ></h5>
+
+                                            <script>
+
+                                            // Set the date we're counting down to
+                                            countDownDate[<%=index%>] = new Date(<%=item.expirytime%>).getTime();
+
+                                            // Update the count down every 1 second
+
+                                               x[<%=index%>] = setInterval(function() {
+
+                                              // Get today's date and time
+                                               var now = new Date().getTime();
+
+                                              // Find the distance between now and the count down date
+                                               distance[<%=index%>] = countDownDate[<%=index%>]  - now;
+
+                                              // Time calculations for days, hours, minutes and seconds
+                                               days[<%=index%>]  = Math.floor(distance[<%=index%>]  / (1000 * 60 * 60 * 24));
+                                               hours[<%=index%>]  = Math.floor((distance[<%=index%>] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                               minutes[<%=index%>]  = Math.floor((distance[<%=index%>]  % (1000 * 60 * 60)) / (1000 * 60));
+                                               seconds[<%=index%>]  = Math.floor((distance[<%=index%>]  % (1000 * 60)) / 1000);
+
+                                              // Output the result in an element with id="demo"
+                                              document.getElementById("<%=item.id%>").innerHTML = days[<%=index%>]  + "d " + hours[<%=index%>]  + "h "+ minutes[<%=index%>]  + "m " + seconds[<%=index%>]  + "s ";
+
+                                              // If the count down is over, write some text
+                                              if (distance[<%=index%>] < 0) {
+                                                clearInterval(x[<%=index%>]);
+                                                document.getElementById("<%=item.id%>").innerHTML = "EXPIRED";
+                                              }
+                                            }, 1000);
+
+                                            </script>
+
+                                            <h5>Donor : <%=item.donorname%></h5>
+                                            <p class="font-italic"><em>ADDRESS: </em><%=item.donoraddress%></p>
+                                            <input type="hidden" name="foodid" value="<%=item.id%>">
+                                            <input type="hidden" name="recemailadd" value="<%=recmail%>">
+                                            <button type="submit" class="btn btn-dark btn-lg float-right submit">Get</button>
+                                              </form>
+                                        </div>
+                                    </div>
+
+
+                                <%  }) %>
+
+
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+                  <div class="get col-lg-5">
+
+
+                  <h2>Your Cart</h2>
+
+                  <div class="row py-5 removeit" id="cartitms">
+                      <div class="card mb-4">
+                          <div class="card-body p-5">
+                              <div class="custom-scrollbar-css p-3">
+
+                              <%  if(orderedfooditems.length == 0){   %>
+                                  <div class="card mb-4">
+                                      <div class="card-body p-3">
+                                          <h5 style="align:center;">Your Cart is Empty</h5>
+                                          <br>
+                                          <p class="font-italic">You can choose the food you want, from the list of available foods displayed in
+                                          the <em>Available Foods</em> section. Once you get the foods from available foods section, click on the <em>Confirm button</em>
+                                          below to place the order.Thank You!!</p>
+                                        </div>
+                                    </div>
+                              <%  }  %>
+
+                                  <% orderedfooditems.forEach(function(item,index){ %>
+
+
+                                    <div class="card mb-4">
+                                        <div class="card-body p-3">
+                                          <form action="/deletecartitems" method="post">
+                                            <h3><%=item.foodName%> (<%=item.no_of_persons%> persons)</h3>
+                                            <h5 style="color:black;">Best Before :</h5>
+                                            <h5><%=item.expiry%></h5>
+                                            <h5><b>Donor : </b><%=item.donorname%></h5>
+                                            <p class="font-italic"><%=item.address%></p>
+                                            <input type="hidden" name="foodid2" value="<%=item.fdid%>">
+                                            <input type="hidden" name="delindexvalue" value="<%=index%>">
+                                            <button type="submit" class="btn btn-dark btn-lg float-right submit">Remove</button>
+                                          </form>
+                                        </div>
+                                    </div>
+
+
+                                <%  }) %>
+
+                              </div>
+                              <form  action="/submitcart" method="post">
+                                <input type="hidden" name="recmail" value="<%=recmail%>">
+                                <button type="submit" class="btn btn-lg btn-dark" name="button" style="margin: 10% 0 0;">Confirm</button>
+                              </form>
+                          </div>
+                      </div>
+
+                  </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+<section>
+  <div id="querysection">
+    <h1>Frequently Asked Questions</h1>
+    <h4>Why is my page getting Refreshed Automatically?</h4>
+    <p>This page will be automatically refreshed for every 2 minutes, to get the latest donated food details .If this page
+      didn't get refreshed, Yow will see only the food data that gets loaded once you reach this page ,and no new foods that are donated after you reach
+     this page are displated. In order to get the details of the food donated after reaching this page, we have made this page to refresh every 2 minutes.</p>
+    <h4>Why my cart items are getting deleted Automatically?</h4>
+    <p>once you order a food by pressing the get button ,It will be added to your cart. This food will be present in the cart for 20 minutes from
+    the time you have added to the your cart. To permanrntly get the food, you need to press the confirm button within 20 minutes of adding the food to the cart.</p>
+    <h4>Where can I see my ordered food List?</h4>
+    <p>In this page,at the top right corner you wll see three links[ If You are opening this website in mobile or tablet then click on the button
+      that appears on top right corner to get thre links ], click on <b>My Orders</b> to see the foods that are ready for you to collect. </p>
+  </div>
+</section>
+    <!-- Contact us  section -->
+
+    <footer id="footer">
+        <h1>Contact Us</h1>
+        <i class="social-icon fab fa-facebook-f fa-1x"></i>
+        <i class="social-icon fab fa-instagram fa-1x"></i>
+        <i class="social-icon fas fa-envelope fa-1x"></i>
+        <i class="social-icon fab fa-twitter fa-1x"></i>
+
+    </footer>
+
+
+
+</body>
+
+</html>
