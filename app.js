@@ -35,7 +35,7 @@ var transporter = nodemailer.createTransport({
 
 // mongoose & mongo db connection
 
-mongoose.connect("mongodb://localhost:27017/foodredistributionDB", {
+mongoose.connect("mongodb+srv://admin-Sanjay:test-123@cluster0-l3890.mongodb.net/foodredistributionDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
    useFindAndModify: false
