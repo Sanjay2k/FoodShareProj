@@ -23,12 +23,12 @@ var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'foodshareproj@gmail.com',
-    pass: process.env.PASS
+    pass: 'Foodshare123'
   }
 });
 
 // mongoose & mongo db connection
- mongoose.connect("mongodb+srv://admin-Sanjay:xxx@cluster0-l3890.mongodb.net/foodredistributionDB", {
+mongoose.connect("mongodb+srv://admin-Sanjay:test-123@cluster0-l3890.mongodb.net/foodredistributionDB", {
 
   useNewUrlParser: true,
   useUnifiedTopology: true,
