@@ -54,6 +54,28 @@ body {
     transition-duration: 1s;
 }
 
+#title .btn_link {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #05386b;
+    background: none;
+    border: none;
+    padding: 8% 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+#title .btn_link:focus {
+    border: none;
+    outline: none;
+}
+#title .btn_link:hover {
+    text-decoration: none;
+    outline: none;
+    color: #fefbd8;
+    transition-duration: 1s;
+
+}
 
 /* receive */
 
@@ -189,4 +211,45 @@ body {
 
 #footer i {
     padding: 0 12px 4%;
+}
+
+
+@media screen and (max-width: 480px){
+
+  #title .navbar-brand {
+    font-size: 1.5rem;
+  }
+ .p-5{
+    padding: 5%!important;;
+  }
+  #receive .get h2 {
+    padding: 7% 0 0 0;
+  }
+  #receive h5 {
+    font-size: 1rem;
+ }
+ #receive h3 {
+   font-size: 1.5rem;
+}
+  #querysection h1{
+    font-size: 1.9rem;
+    margin-bottom: 10%;
+  }
+  #querysection h4{
+    font-size: 1.4rem;
+  }
+  #querysection {
+    padding: 3% 10% 5%;
+  }
+  #last-wave{
+    display: none;
+    height: 0;
+  }
+  #footer{
+    padding-bottom: 2%;
+  }
+  #footer h1 {
+    font-size: 1.4rem;
+  }
+
 }

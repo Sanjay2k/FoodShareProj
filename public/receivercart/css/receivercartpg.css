@@ -49,6 +49,28 @@ body {
     transition-duration: 1s;
 }
 
+#title .btn_link {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #05386b;
+    background: none;
+    border: none;
+    padding: 8% 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+#title .btn_link:focus {
+    border: none;
+    outline: none;
+}
+#title .btn_link:hover {
+    text-decoration: none;
+    outline: none;
+    color: #fefbd8;
+    transition-duration: 1s;
+
+}
 
 /* rechompg */
 #rechompg .foodcartlist h2 {
@@ -123,4 +145,23 @@ body {
 
 #footer i {
     padding: 0 12px 4%;
+}
+
+@media screen and (max-width: 480px){
+  #title .navbar-brand {
+    font-size: 1.5rem;
+}
+#rechompg .foodcartlist h2 {
+    padding: 10% 0 2%;
+}
+.p-5{
+    padding: 4%!important;
+}
+#footer h1 {
+    padding: 5% 0 2%;
+    font-size: 1.4rem;
+}
+#footer{
+  padding-bottom: 2%;
+}
 }

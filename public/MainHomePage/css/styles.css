@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
 
 /* black-900, bold-700, medium-500, light-300 */
@@ -26,6 +27,7 @@ a {
   color: #fff;
 }
 
+
 /*Navigation bar*/
 #title .navbar {
   padding: 0 0 4.5rem;
@@ -35,6 +37,14 @@ a {
   font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  #title .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
 
 #title .nav-item {
@@ -61,11 +71,29 @@ a {
   background-color:  #ffffb3;
 }
 
+@media (max-width: 480px) {
+  #title .download-button {
+    margin: 12% 2% 10%;
+    font-size: 18px;
+    text-align: left;
+    background-color:  #ffffb3;
+  }
+}
+
 #title .button {
   margin: 12% 7% 7% 0;
   font-size: 20px;
   text-align: left;
   background-color: #ffffb3;
+}
+
+@media (max-width: 480px) {
+  #title .button {
+    margin: 12% 2% 10%;
+    font-size: 18px;
+    text-align: left;
+    background-color: #ffffb3;
+  }
 }
 
 #title .download-button:hover {
@@ -74,6 +102,13 @@ a {
 
 #title .button:hover {
   background-color: #fdd998;
+}
+
+/*Wave section*/
+
+.wave{
+  display: block;
+  background-color: #fff;
 }
 
 .SignupScroll {
@@ -116,7 +151,11 @@ a {
 #signup h1 {
   padding: 5% 7%;
 }
-
+@media (max-width: 480px) {
+  #signup h1 {
+    font-size: 0.25rem;
+  }
+}
 #signup .donar h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
@@ -320,39 +359,36 @@ a {
 }
 
 #subtitle .c1 h2 {
-  padding: 15% 10% 0%;
+  padding: 15% 10% 7%;
 }
 
-#subtitle .c1 p{
+#subtitle .c1 li{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: left;
-  padding: 10% 10% ;
-  margin-bottom: 4%;
+  padding: 0.5% 3% ;
 }
 
-#subtitle .c2  p{
+#subtitle .c2  li{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: left;
-  padding: 10% 10% ;
-  margin-bottom: 4%;
+  padding: 0.5% 3% ;
 }
 
-#subtitle .c3 p{
+#subtitle .c3 li{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: left;
-  padding: 10% 10% ;
-  margin-bottom: 4%;
+  padding: 0.5% 3% ;
 }
 
 #subtitle .c2 h2 {
-  padding: 15% 10% 0%;
+  padding: 15% 10% 7%;
 }
 
 #subtitle .c3 h2 {
-  padding: 15% 10% 0%;
+  padding: 15% 10% 7%;
 }
 
 .c1, .c2, .c3 {
@@ -448,6 +484,90 @@ h2{
 
 #footer i {
   padding: 0 2% 5%;
+}
+
+@media screen and (max-width: 480px){
+  #title .title-h1{
+    font-size: 1.9rem;
+  }
+  #signup .signup-h1{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #signup .donar .signup-h2{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  #signup .receiver .signup-h2{
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  #signup .para{
+    font-size: 0.9rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #signup .submit{
+    width:48%;
+    font-size: 1rem;
+  }
+  #aboutus .aboutusheading{
+    font-size: 2.5rem;
+  }
+  #aboutus .about .para{
+    font-size: 1rem;
+    text-align: justify;
+  }
+  #icon h3 {
+    font-size: 1.5rem;
+  }
+  #slider h1 {
+    text-align: center;
+    padding:0 0 7% 0;
+    font-size: 2rem;
+}
+  #slider .carousel {
+  width:100%;
+  margin: 0 auto;
+}
+  #pictureText .container-fluid .pictureText ul{
+    font-size: 0.85rem;
+    text-align: justify;
+  }
+  #subtitle .subtitle-h1{
+    font-size:1.8rem;
+    text-align: center;
+  }
+  #subtitle .howweovercomeimg1 {
+    padding-top: 12%;
+    width: 90%;
+  }
+  #subtitle .c1 .subtitle-para{
+    font-size: 1rem;
+    text-align: justify;
+  }
+  #subtitle .c2 .subtitle-para{
+    font-size: 1rem;
+    text-align: justify;
+  }
+  #subtitle .c3 .subtitle-para{
+    font-size: 1rem;
+    text-align: justify;
+  }
+  #feedback {
+    padding: 7% 7%;
+  }
+  #feedback .feedback-h1{
+    font-size: 1.28rem;
+  }
+  #footer {
+    padding-bottom: 7%;
+}
+  #footer h1 {
+    padding: 2% 0;
+    font-size: 2rem
+
+}
 }
 
 /* background-color: #3bb78f;

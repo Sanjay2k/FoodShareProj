@@ -134,12 +134,18 @@ select option {
   }
 }
 
-
-
-
 .form-row{
   text-align: center;
 }
+/*Wave section*/
+
+.wave{
+  display: block;
+  background-color: #fff;
+}
+
+
+
 #title {
     /* background-image: url("leaf.jpg"); */
     background-size: cover;
@@ -252,7 +258,7 @@ select option {
 } */
 #details h5 {
     text-align: center;
-    padding: 1.5% 15% 0;
+    padding: 1.5% 10% 0;
     color: #216353;
 }
 
@@ -654,4 +660,86 @@ ul {
 
 #footer i {
     padding: 0 2% 5%;
+}
+@media screen and (max-width: 480px){
+  #title .navbar-brand {
+    font-size: 1.5rem;
+}
+#title h2 {
+    padding: 8% 0 0;
+    font-size: 1.7rem;
+}
+#hideh6 {
+    display: none;
+  }
+.allign-center {
+      padding: 0 5%;
+  }
+#title .btn {
+      padding: 2% 7%;
+      margin-left: 5%;
+      margin-right: 5%
+}
+#break1{
+  display: none;
+}
+.form-2-input {
+    font-size: 0.9rem;
+    line-height: 3em;
+    padding: 0 0.5%;
+  }
+#space-rem {
+      padding: 0;
+  }
+#thankyoumsg .about .para {
+    padding: 10% 2% 5%;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+#third h1 {
+    padding: 0% 2% 4%;
+    font-size: 2rem;
+}
+#third .r1 p {
+    padding: 10% 2% 5%;
+    font-size: 1rem;
+    text-align: justify;
+}
+#third .r2 p {
+    padding: 10% 2% 5%;
+    font-size: 1rem;
+    text-align: justify;
+}
+#third .r3 p {
+    padding: 10% 2% 5%;
+    font-size: 1rem;
+    text-align: justify;
+}
+#subtitle h1 {
+    padding: 0% 2% 4%;
+    font-size: 1.9rem;
+}
+#subtitle .c1 h2 {
+    padding: 10% 5% 0%;
+    font-size: 1.5rem;
+}
+#subtitle .c2 h2 {
+    padding: 10% 5% 0%;
+    font-size: 1.5rem;
+}
+#subtitle .c1 p {
+    text-align: justify;
+    font-size: 1rem;
+}
+#subtitle .c2 p {
+    text-align: justify;
+    font-size: 1rem;
+}
+#footer h1 {
+    padding: 5% 0 2%;
+    font-size: 1.4rem;
+}
+#footer{
+  padding-bottom: 2%;
+}
 }

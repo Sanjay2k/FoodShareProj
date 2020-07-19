@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <title>FoodRe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--   CSS LINK-->
-  <link rel="stylesheet" type="text/css" href="donorhomepage/css/donar.css">
 
   <!--    Bootstrap link-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -18,6 +16,10 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!--   CSS LINK-->
+  <link rel="stylesheet" type="text/css" href="donorhomepage/css/donar.css">
+
 </head>
 
 <body>
@@ -48,7 +50,7 @@
       </nav>
       <h2>Welcome Donor !!</h2>
     </div>
-    <h6>what would you like to donate ?</h6>
+    <h6 id="hideh6" >what would you like to donate ?</h6>
     <form class="allign-center" action="/donatedfood" method="post" id="donationform">
       <input type="text" class="input" placeholder="Foodname" name="foodname" autocomplete="off" required>
       <input type="number" class="input" placeholder="persons can be served" name="qty" autocomplete="off" required>
@@ -65,6 +67,7 @@
       <option value=12>1/2 day</option>
       <option value=24>1 day</option>
       </select>
+      <input type="hidden" name="donemail" value="<%=donemail%>">
       <button type="submit" name="button" class="btn btn-dark">ADD</button>
     </form>
     <br>
@@ -72,23 +75,26 @@
 
   <!-- detail section -->
   <section id=details>
-    <br><br>
-
+    <div id="break1">
+          <br>
+    </div>
+<br>
     <h6 class="donationList">Food Items List</h6>
     <div class="form-2-border">
 
     <% if(button == 1){ %>
       <form class="no-btm-line">
-      <input type="text" class="form-2-input" style="text-align: center;" value="Your cart is empty" size="38">
+      <input type="text" class="form-2-input" style="text-align: center;" value="Your cart is empty" size="31">
       </form>
 <%}else{%>
 
       <% foodarray.forEach(function(item,index){ %>
 
       <form class="btm-line" action="/deletedonatedfood" method="post">
-        <input type="text" class="form-2-input" value="<%=item.foodName%> - <%=item.no_of_persons%> persons - <%=item.hours%>hrs" size="35">
-        <input type="hidden" name="indexvalue" value="<%= index %>">
-        <button type="submit" name="button" class="btn"><i class="fas fa-trash" aria-hidden="true"></i></button>
+        <input type="text" class="form-2-input" value="<%=item.fdname%> - <%=item.persons%> persons - <%=item.hours%>hrs" size="31">
+        <input type="hidden" name="foodid" value="<%=item.id%>">
+        <input type="hidden" name="donemail" value="<%=donemail%>">
+        <button type="submit" name="button" id="space-rem" class="btn"><i class="fas fa-trash" aria-hidden="true"></i></button>
       </form>
 
     <%  }) %>
@@ -113,13 +119,21 @@
       </div>
       <div class="about col-lg-6">
         <h2 class="thankyoumsgheading">Thank-you Donor</h2>
-        <p class="para">Hey welcome :) and Thanks for joining hands with us. With your presence we can make a change in the society by taking small steps
-           towards our goal of removing hunger in the society. So keep supporting us!</p>
+        <p class="para">Hey Donor :) Thank you for joining hands with us. With your presence we can make a remarkable change in the society by taking small steps
+           towards The goal of removing hunger in our society. So keep supporting us!</p>
         </div>
     </div>
   </div>
 </section>
   <!-- Third Section -->
+  <!-- Wave Section -->
+
+<div class="wave" style="height: 150px; overflow: hidden;" >
+
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.94,42.92 C154.62,184.03 349.88,-56.73 531.04,92.27 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #b5e7a0;"></path></svg>
+
+</div>
+
 
   <section id=third>
     <h1>Problems In India</h1>
@@ -154,6 +168,14 @@
 
   <!-- Description section -->
 
+  <!-- Wave section -->
+
+   <div class="wave" style="height: 150px; overflow: hidden;" >
+
+     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #b5e7a0;"></path></svg>
+
+   </div>
+
   <section id="subtitle">
     <h1>How We Overcome</h1>
     <div class="container-fluid">
@@ -163,15 +185,14 @@
         </div>
         <div class="c1 col-lg-6">
           <h2>Increased Food Availability</h2>
-          <p>We are joining hands with a large number of kind-hearted Donors like you, so we can increase the quantity of the food within particular area
-             with a time constraint from which a can serve large number of people within a particular zone. Hence the Availability of food will be increased
-             and the number of people benefited will also increase. </p>
+          <p>We are joining hands with a large number of kind-hearted Donors like you and, we are constantly working to expand our network so we can increase the Availability of the food in each region
+             and serve large number of needy. </p>
         </div>
 
         <div class="c2 col-lg-6">
           <h2>Reaching larger extent of people</h2>
-          <p>With FoodShare we are reaching larger extent of people with the help of the network that we have built, i.e. we will serve not only the people
-             in the orphanages by also the people who are homeless and struggling for their daily meal with the help of the sub-control system. </p>
+          <p>On the other hand we are reaching larger extent of needy people with the help of the network that we have built with the orphanages ,and with the help of orphanages we serve not only the people
+             in the orphanages by also the people who are homeless and struggling for their daily meal , by linking them in our system.</p>
         </div>
         <div class="c2 col-lg-6">
           <img src="donorhomepage/images/donrnetworking.jpg" alt="" class="howweovercomeimg">
@@ -180,12 +201,21 @@
     </div>
   </section>
 
+  <!-- Wave section -->
+
+<div class="wave">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00af66" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,128C384,149,480,203,576,224C672,245,768,235,864,202.7C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+</div>
+
+
   <footer id="footer">
     <h1>Contact Us</h1>
-    <i class="social-icon fab fa-facebook-f fa-2x"></i>
-    <i class="social-icon fab fa-instagram fa-2x"></i>
-    <i class="social-icon fas fa-envelope fa-2x"></i>
-    <i class="social-icon fab fa-twitter fa-2x"></i>
+    <i class="social-icon fab fa-facebook-f fa-1x"></i>
+    <i class="social-icon fab fa-instagram fa-1x"></i>
+    <i class="social-icon fas fa-envelope fa-1x"></i>
+    <i class="social-icon fab fa-twitter fa-1x"></i>
 
   </footer>
 

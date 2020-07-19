@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,8 +6,6 @@
   <meta charset="utf-8">
   <title>FoodShare</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--   CSS LINK-->
-  <link rel="stylesheet" type="text/css" href="MainHomePage/css/styles.css">
 
   <!--    Bootstrap css link-->
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -18,6 +17,9 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!--   CSS LINK-->
+  <link rel="stylesheet" type="text/css" href="MainHomePage\css\styles.css">
 </head>
 
 <body>
@@ -52,10 +54,10 @@
 
       <div class="row">
         <div class="col-lg-6 col">
-          <h1>Making Hunger Disappear</h1>
+          <h1 class="title-h1">Making Hunger Disappear</h1>
           <a href="/donlogin">
           <button type="button" class="btn btn-lg download-button db">
-            <p>Donar</p>
+            <p>Donor</p>
             <p>Login</p>
             <p><i class="fas fa-arrow-right"></i></p>
           </button>
@@ -79,22 +81,30 @@
     </div>
   </section>
 
+  <!--Wave division-->
+
+  <div class="wave">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#00af66" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,128C384,149,480,203,576,224C672,245,768,235,864,202.7C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+
+  </div>
+
   <!-- SignUp Section -->
 
   <section id="signup">
-    <h1>Dont Have An Account?</h1>
+    <h1 class="signup-h1">Don't Have An Account?</h1>
     <div class="container-fluid">
       <div class="row">
         <div class="donar col-lg-6 verticalLine">
-          <h2>Donar</h2>
-          <p class="para">Hey Donor! Please click the button below to sign up and Get Started :)  Join hands with us to help the needed.</p>
+          <h2 class="signup-h2">Donor</h2>
+          <p class="para">Hey Donor! Please click the button below to sign up and Get Started :)  Join hands with us to help the needy.</p>
           <a class="btn btn-dark btn-lg submit" href="/donarsignup" role="button">Sign Up</a>
         </div>
         <!-- <div class="donar col-lg-4 verticalLine">
           <h1 class="verticalLine"></h1>
         </div> -->
         <div class="receiver col-lg-6">
-          <h2>Receiver</h2>
+          <h2 class="signup-h2">Receiver</h2>
           <p class="para">Hey Receiver!  Please click the button below to sign up and Get Started :) Join hands with us to Buit a Greater network</p>
       <a class="btn btn-dark btn-lg submit" href="/receiversignup" role="button">Sign Up</a>
 
@@ -115,6 +125,14 @@
         </div>
     </section> -->
 
+  <!-- Wave Section -->
+
+<div class="wave" style="height: 150px; overflow: hidden;" >
+
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.94,42.92 C154.62,184.03 349.88,-56.73 531.04,92.27 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #b5e7a0;"></path></svg>
+
+</div>
+
   <!-- About Us  Section -->
 
   <section id="aboutus">
@@ -125,8 +143,8 @@
         </div>
         <div class="about col-lg-6">
           <h2 class="aboutusheading">About Us</h2>
-          <p class="para">We are a team an engineering students who take an initiative a help a needed ones.
-            We created this web application to act as a bridge between the Donors and the Receiver. The main objective of the FoodShare is to avoid food wastages and serve those who are in suffering from hunger.</p>
+          <p class="para">We are a team of engineering students who took an initiative to help the needy.
+            We created this web application to act as a bridge between the Donors and the Receiver. The main objective of the FoodShare is to avoid food wastage and serve those who are suffering from hunger.</p>
           </div>
       </div>
     </div>
@@ -158,11 +176,17 @@
     </div>
   </section>
 
+  <!-- Wave section -->
+
+  <div id="hide "class="wave" style="height: 150px; overflow: hidden;" >
+
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #b5e7a0;"></path></svg>
+
+  </div>
 
   <!-- slider section -->
   <section id="slider">
-    <br><br><br>
-    <h1>Problems In India</h1>
+    <h1 class="slider-h1">Problems In India</h1>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -171,13 +195,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="MainHomePage/images/slide1.jpg" class="d-block w-100 " alt="...">
+          <img src="MainHomePage/images/Slide1.jpg" class="d-block w-100 " alt="...">
         </div>
         <div class="carousel-item">
-          <img src="MainHomePage/images/slide2.jpg" class="d-block w-100" alt="...">
+          <img src="MainHomePage/images/Slide2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="MainHomePage/images/slide3.jpg" class="d-block w-100" alt="...">
+          <img src="MainHomePage/images/Slide3.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -207,25 +231,38 @@
     </div>
   </section>
 
+   <!-- Wave section -->
+
+  <div class="wave" style="height: 150px; overflow: hidden;" >
+
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.94,42.92 C154.62,184.03 349.88,-56.73 531.04,92.27 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #b5e7a0;"></path></svg>
+
+  </div>
 
   <!-- description section -->
   <section id="subtitle">
-    <h1>How We Overcome ?</h1>
+    <h1 class="subtitle-h1">How We Overcome ?</h1>
     <div class="container-fluid">
       <div class="row">
         <div class="c1 col-lg-6">
           <img src="MainHomePage/images/betterreachability.jpg" alt="" class="howweovercomeimg1">
         </div>
         <div class="c1 col-lg-6">
-          <h2>BETTER REACHABILITY</h2>
-          <p>The donors don’t need to transport the foods since we are creating a sub-control system by which the people who are in need will directly collect the food. So we doesn’t have any transportation charges.
-             We don’t need to search the needy people, because we are making them to come to us.  Hence it’s a self-sustaining idea! </p>
+          <h2 class="subtitle-h2">BETTER REACHABILITY</h2>
+          <ul>
+            <li class="subtitle-para">Initially we built our network with almost every orphanages and provide then an additional food source such that no orphans suffers from hunger.</li>
+            <li class="subtitle-para">With the network of orphanages that we have built we link homeless people starving for food and serve them food through orphanages.</li>
+            <li class="subtitle-para">By the above ways we are extending our service to a greater extent and reaching out a larger people starving of food than any others.</li>
+          </ul>
         </div>
 
         <div class="c2 col-lg-6">
-          <h2>ZERO WASTAGE</h2>
-          <p>The important Goal of us is Zero wastage of the food which can be achieved by making sure that the receiver collects the food.
-             And we will also set an expiry time limit for the food items before which the receiver should collect the food, so the food items will not be wasted and the donors don’t need to wait for the receiver for a long time. </p>
+          <h2 class="subtitle-h2">ZERO WASTAGE</h2>
+          <ul>
+            <li class="subtitle-para">Since we are constantly focusing on building networks we could find large number of donors and receivers</li>
+            <li class="subtitle-para">With our network of donors and receiver we maximize the food availability in each localised regions</li>
+            <li class="subtitle-para">In our system receivers can directly interract with the donors in their region and get the food directly from Donors by themselves as soon as the food is posted for donation.</li>
+          </ul>
         </div>
         <div class="c2 col-lg-6">
           <img src="MainHomePage/images/zerowastage.png" alt="" class="howweovercomeimg">
@@ -234,20 +271,32 @@
           <img src="MainHomePage/images/Networking.jpg" alt="" class="howweovercomeimg">
         </div>
         <div class="c3 col-lg-6">
-          <h2>NETWORKING</h2>
-          <p>We are creating a network between the Donor and the Receiver by acting as a bridge between them. We are also linking the homeless people with the help of the receiver i.e.
-            orphanages and they can collect the food from the sub-control systems and we make sure that more number of people will be benefited. Hence the network that we create can remove the Hunger , and our goal will be fulfilled :)</p>
+          <h2 class="subtitle-h2">NETWORKING</h2>
+          <ul>
+            <li class="subtitle-para">We are trying to reaching out as many orphanages as possible and trying to serve them as our first stage</li>
+            <li class="subtitle-para">In order to reach out homeless people starving for food we are seeking the help of orphanages in search of them in allocated area for each orphanages.</li>
+            <li class="subtitle-para">On the other hand we are reaching out as many kind-hearted donors like you through references.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Wave section -->
+
+  <div class="wave" style="height: 150px; overflow: hidden;" >
+
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #b5e7a0;"></path></svg>
+
+  </div>
+
 
   <!-- feedback section -->
 
   <section id="feedback">
-    <h1>Feedback Form</h1>
-    <h6>We value your feedback</h6>
+    <h1 class="feedback-h1">Feedback Form</h1>
+    <br>
+    <h6 class="feedback-h6">We value your feedback</h6>
     <form action="/send-email" method="post">
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
@@ -261,6 +310,12 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </section>
+
+<div class="wave">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00af66" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,128C384,149,480,203,576,224C672,245,768,235,864,202.7C960,171,1056,117,1152,101.3C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+</div>
 
   <!-- Contact us  section -->
 

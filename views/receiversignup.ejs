@@ -2,39 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-  <title>FoodShare</title>
-
-  <!--   CSS LINK-->
-  <link rel="stylesheet" type="text/css" href="signUp/css/signup.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-
-  <!--    Bootstrap link-->
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-  <!--    Bootstrap link-->
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <title>FoodShare</title>
+    <link rel="stylesheet" type="text/css" href="signUp/css/signup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <section id=signup>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="poster col-lg-3">
-          <br><br><br><br><br><br><br><br>
-          <h1>Welcome</h1>
-          <br>
-          <h5>We make sure that you get benifited by exploring food donors more than ever!  </h5>
-          <br><br><br><br><br>
+    <img class="wave" src="signUp/image/wave.png">
+    <div class="container">
+        <div class="img">
+            <img src="signUp/image/meeting.png">
         </div>
-        <div class="form col-lg-9">
-          <div class="login-content">
-            <form action="/rsignup" method="post">
+        <div class="signup-content">
+        <form action="/rsignup" method="post" >
               <h2 class="title">Sign Up</h2>
+              <h4>(Receiver)</h4>
               <div class="input-div one">
                 <div class="i">
                   <i class="fas fa-user"></i>
@@ -81,21 +66,23 @@
                   <input type="password" class="input" name="rpassword" required>
                 </div>
               </div>
-              <br>
-              <input type="submit" class="btn" value="Sign Up">
+              <%  if(alertbox == 1){ %>
+                <div class="alert alert-danger">
+                <strong>Invalid!</strong> Username already exists.
+                </div>
+                <p>Already have an account ? <a class="stretched-link" style="position: relative;display: inline-block;" href="/reclogin">Login</a></p>
+              <%  }else{ %>
+                <br>
+              <% } %>
+              <input type="submit" class="button1" value="Sign Up">
             </form>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
-
+    <script type="text/javascript" src="signUp/js/signup.js"></script>
+    <!-- bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
-<!--    Bootstrap link-->
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src="signUp/js/signup.js"></script>
 </html>
